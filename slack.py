@@ -48,7 +48,7 @@ class Slack(NotificationBackend):
             attachment['fields'].append(d)
 
         if notification.sub_type:
-            d = {'title': 'Sub Type', 'value': notification.sub_type, 'short': True}
+            d = {'title': 'Sub Type', 'value': ', '.join(notification.sub_type), 'short': True}
             attachment['fields'].append(d)
 
         if notification.source:
